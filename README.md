@@ -1,22 +1,40 @@
-# Quiz App 🎯
+# Quiz App
 
-This is a simple and responsive web-based quiz application built with HTML, CSS, and JavaScript. Users can choose subjects and subcategories to test their knowledge on various topics like programming, science, math, and more.
+A small HTML, CSS and JavaScript quiz app. No account, backend or API key is needed.
 
-## 🧠 Features
+## Run
 
-- Dynamic subject & subcategory selection
-- Minimum 20 randomized questions per quiz
-- Immediate answer feedback
-- Score tracking and results display
+Open `Quiz App/index.html` in your browser, or serve the repository:
 
-## 🚀 Getting Started
+```sh
+git clone https://github.com/simakelvinpeter/quiz-app.git
+cd quiz-app
+python -m http.server 8080
+```
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/simakelvinpeter/quiz-app.git
+Open <http://localhost:8080/Quiz%20App/>.
 
-2. cd quiz-app
+## Features
 
-3. Open index.html in your browser to launch the app.
+- Five categories: general programming, Python, C++, physics and chemistry.
+- Each category contains 20 distinct questions; questions and answer options shuffle.
+- Answers display as text, including HTML/code examples.
+- One answer per question, immediate feedback, live score, final results and restart.
+- Keyboard answers support Tab and Enter/Space.
 
+## Editing
 
+`Quiz App/questions.js` contains the questions, `script.js` handles the quiz, and `styles.css` keeps the original design. Each question needs four distinct choices and one matching answer. Results reset on reload; this is a simple practice app.
+
+## Checks
+
+```sh
+node --test tests/questions.test.cjs
+```
+
+Optional browser checks require Python, Playwright and Microsoft Edge:
+
+```sh
+pip install playwright
+python tests/browser_test.py
+```

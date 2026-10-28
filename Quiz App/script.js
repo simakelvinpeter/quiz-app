@@ -1,4 +1,3 @@
-// Read elements once. questions.js supplies the question bank.
 const subjectSelect = document.getElementById('subject');
 const subcategorySelect = document.getElementById('subcategory');
 const startButton = document.getElementById('start-btn');

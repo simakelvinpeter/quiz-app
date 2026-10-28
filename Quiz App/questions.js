@@ -1,4 +1,3 @@
-// Each category contains 20 distinct questions.
 const allQuestions = {
   programming: {
     general: [
